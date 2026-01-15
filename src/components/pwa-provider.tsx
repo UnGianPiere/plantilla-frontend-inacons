@@ -31,8 +31,9 @@ export function PWAProvider({ children }: PWAProviderProps) {
       }
     };
 
-    // Solo registrar en producción y si está disponible
+    // Registrar siempre en localhost/desarrollo, solo producción en otros entornos
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      // Permitir registro en desarrollo para testing
       registerSW();
     }
   }, []);

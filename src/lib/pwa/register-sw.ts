@@ -19,11 +19,11 @@ interface SWUpdateInfo {
  * Solo en producción y cuando está disponible
  */
 export async function registerServiceWorker(): Promise<SWRegistrationResult> {
-  // Solo registrar en producción
-  if (process.env.NODE_ENV !== 'production') {
-    console.log('[PWA] SW registration skipped in development');
-    return { success: false, error: 'Development mode' };
-  }
+  // Permitir registro en desarrollo para testing local
+  // if (process.env.NODE_ENV !== 'production') {
+  //   console.log('[PWA] SW registration skipped in development');
+  //   return { success: false, error: 'Development mode' };
+  // }
 
   // Verificar soporte
   if (!('serviceWorker' in navigator)) {
