@@ -1,17 +1,20 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { Providers } from '@/providers/providers';
-import { PWAProvider } from '@/components/pwa-provider';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#1f2937',
+};
 
 export const metadata: Metadata = {
   title: 'Activos Fijos - Sistema de Gestión',
   description: 'Sistema completo para la gestión de activos fijos',
   manifest: '/manifest.json',
-  themeColor: '#1f2937',
-  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({
@@ -23,9 +26,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={inter.className} suppressHydrationWarning>
         <Providers>
-          <PWAProvider>
-            {children}
-          </PWAProvider>
+          {children}
         </Providers>
       </body>
     </html>

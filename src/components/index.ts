@@ -15,8 +15,3 @@
 export * from './common';
 export * from './ui';
 
-// Componentes PWA y offline
-export { UpdateToast, UpdateBanner } from './update-toast';
-export { OfflineBanner, GlobalOfflineBanner, ConnectionBadge } from './offline-banner';
-export { SyncIndicator, SyncBadge, useSyncStatus } from './sync-indicator';
-export { PWAProvider } from './pwa-provider';

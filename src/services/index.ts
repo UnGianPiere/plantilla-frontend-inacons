@@ -13,7 +13,7 @@
 // Servicios existentes
 export { authService } from './auth-service';
 
-// Servicio de sincronización PWA
+// Servicio de sincronización
 export {
   SyncService,
   getSyncService,

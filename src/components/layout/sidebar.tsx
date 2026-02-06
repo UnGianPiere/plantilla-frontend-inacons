@@ -10,6 +10,8 @@ import {
   LayoutDashboard,
   LogOut,
   X,
+  Kanban,
+  Briefcase
 } from 'lucide-react';
 import clsx from 'clsx';
 import { useState, useEffect } from 'react';
@@ -21,6 +23,16 @@ const navItems = [
     href: '/',
     icon: LayoutDashboard,
   },
+  {
+    name: 'Kanban',
+    href: '/kanban',
+    icon: Kanban,
+  },
+  {
+    name: 'Convocatorias',
+    href: '/convocatorias',
+    icon: Briefcase,
+  }
 ];
 
 export function Sidebar() {
@@ -61,7 +73,7 @@ export function Sidebar() {
     <>
       <div
         className={clsx(
-          'flex h-full flex-col bg-[var(--sidebar-bg)] transition-all duration-300 card-shadow',
+          'flex h-full flex-col bg-(--sidebar-bg) transition-all duration-300 card-shadow',
           'fixed md:relative z-30',
           {
             'w-16': isCollapsed && !isMobile,
@@ -118,7 +130,7 @@ export function Sidebar() {
                 <span className={clsx(
                   "text-[10px] font-medium text-center leading-tight",
                   theme === 'dark'
-                    ? "text-[var(--text-secondary)]"
+                    ? "text-text-secondary"
                     : "text-gray-700"
                 )}>
                   Activos Fijos
@@ -151,8 +163,8 @@ export function Sidebar() {
                   className={clsx(
                     'flex items-center gap-3 px-3 py-2 rounded-md text-xs font-medium relative transition-all duration-300 ease-in-out sidebar-nav-item group',
                     {
-                      'bg-[var(--sidebar-active-bg-light)] text-[var(--sidebar-active-text-light)] sidebar-nav-item-active border-l-[3px] border-[var(--sidebar-active-bg)]': active,
-                      'text-[var(--text-secondary)] hover:bg-[var(--hover-bg)] hover:text-[var(--text-primary)]': !active,
+                      'bg-(--sidebar-active-bg-light) text-(--sidebar-active-text-light) sidebar-nav-item-active border-l-[3px] border-(--sidebar-active-bg)': active,
+                      'text-text-secondary hover:bg-(--hover-bg) hover:text-text-primary': !active,
                       'justify-center': isCollapsed && !isMobile,
                     }
                   )}
@@ -160,10 +172,10 @@ export function Sidebar() {
                 >
                   {Icon && (
                     <Icon className={clsx(
-                      'w-5 h-5 flex-shrink-0 transition-all duration-300 ease-in-out',
+                      'w-5 h-5 shrink-0 transition-all duration-300 ease-in-out',
                       {
-                        'text-[var(--sidebar-active-text-light)]': active,
-                        'text-[var(--text-secondary)] group-hover:scale-110 group-hover:text-[var(--text-primary)]': !active,
+                        'text-(--sidebar-active-text-light)': active,
+                        'text-text-secondary group-hover:scale-110 group-hover:text-text-primary': !active,
                       }
                     )} />
                   )}
@@ -180,7 +192,7 @@ export function Sidebar() {
             <button
               onClick={handleLogout}
               className={clsx(
-                'flex cursor-pointer items-center justify-center gap-1 text-xs p-2 rounded-md bg-[var(--content-bg)] hover:bg-[var(--hover-bg)] w-full text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-all duration-300 ease-in-out sidebar-nav-item group card-shadow',
+                'flex cursor-pointer items-center justify-center gap-1 text-xs p-2 rounded-md bg-(--content-bg) hover:bg-(--hover-bg) w-full text-text-secondary hover:text-text-primary transition-all duration-300 ease-in-out sidebar-nav-item group card-shadow',
                 isCollapsed && !isMobile && 'justify-center'
               )}
             >

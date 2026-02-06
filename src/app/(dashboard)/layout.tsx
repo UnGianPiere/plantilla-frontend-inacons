@@ -7,11 +7,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   return (
     <PrivateRoute>
       <SidebarProvider>
-        <div className="flex h-screen flex-col md:flex-row md:overflow-hidden bg-[var(--background)]">
+        <div className="flex h-screen flex-col md:flex-row md:overflow-hidden bg-background">
             <Sidebar />
             <div className="flex-1 flex flex-col h-screen overflow-hidden">
               <Header />
-              <main className="flex-1 overflow-y-auto bg-[var(--content-bg)] p-6">
+              <main className="flex-1 overflow-y-auto bg-(--content-bg) p-6">
                 {children}
               </main>
             </div>
