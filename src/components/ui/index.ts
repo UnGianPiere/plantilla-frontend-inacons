@@ -1,17 +1,13 @@
-/**
- * 🎨 UI COMPONENTS - COMPONENTES DE INTERFAZ
- *
- * Responsabilidad: Exportar componentes de UI reutilizables
- * Flujo: Importado por páginas y componentes → UI consistente
- *
- * Contiene:
- * - Button: Botones con variants (default, outline, ghost)
- * - Input: Campos de entrada estilizados
- * - LoadingSpinner: Spinner animado con Lottie
- * - [Futuro] Modal, Select, etc.
- */
 
-// Componentes base de UI
 export { Button } from './button';
 export { Input } from './input';
+export { Textarea } from './textarea';
 export { default as LoadingSpinner } from './loading-spinner';
+export { DataTable } from './data-table';
+export { default as Modal } from './modal';
+export { default as NotificationModal } from './notification-modal';
+export type { Column, StatusConfig, DataTableProps } from './data-table';
+export { Select } from './select';
+export type { SelectOption } from './select';
+export { SelectSearch } from './select-search';
+export type { CheckboxOption } from './notification-modal';

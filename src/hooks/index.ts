@@ -13,18 +13,7 @@
 // Hooks de autenticación (viene del context)
 export { useAuth } from '@/context/auth-context';
 
-// Hooks PWA y conectividad
-export {
-  useOnline,
-  useIsOnline,
-  useRequireOnline,
-} from './use-online';
 
-export {
-  useServiceWorkerUpdate,
-  useUpdateNotification,
-  useUpdateProgress,
-} from './use-sw-update';
 
 // [Futuro] Exportar hooks de negocio aquí
 // export { useActivos } from './useActivos';
